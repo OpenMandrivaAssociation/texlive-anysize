@@ -1,3 +1,9 @@
+# revision 15878
+# category Package
+# catalog-ctan /macros/latex/contrib/anysize
+# catalog-date 2009-09-24 14:57:17 +0200
+# catalog-license pd
+# catalog-version undef
 Name:		texlive-anysize
 Version:	20090924
 Release:	1
@@ -40,6 +46,7 @@ package.
 %doc %{_texmfdistdir}/doc/latex/anysize/README
 %doc %{_texmfdistdir}/doc/latex/anysize/anysize.pdf
 %doc %{_texmfdistdir}/doc/latex/anysize/anysize.tex
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -50,3 +57,5 @@ package.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
