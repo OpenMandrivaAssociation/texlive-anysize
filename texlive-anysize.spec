@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-anysize
 Version:	20180303
-Release:	1
+Release:	2
 Summary:	A simple package to set up document margins
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/anysize
