@@ -1,18 +1,12 @@
-# revision 15878
-# category Package
-# catalog-ctan /macros/latex/contrib/anysize
-# catalog-date 2009-09-24 14:57:17 +0200
-# catalog-license pd
-# catalog-version undef
 Name:		texlive-anysize
-Version:	20190228
+Version:	15878
 Release:	1
 Summary:	A simple package to set up document margins
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/anysize
 License:	PD
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/anysize.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/anysize.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/anysize.r15878.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/anysize.doc.r15878.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -24,12 +18,12 @@ typearea package from the koma-script bundle, or the geometry
 package.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -40,25 +34,10 @@ package.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 20090924-2
-+ Revision: 749281
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20090924-1
-+ Revision: 717838
-- texlive-anysize
-- texlive-anysize
-- texlive-anysize
-- texlive-anysize
-- texlive-anysize
-
