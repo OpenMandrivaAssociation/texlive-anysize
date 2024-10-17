@@ -3,7 +3,7 @@ Version:	15878
 Release:	2
 Summary:	A simple package to set up document margins
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/anysize
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/anysize
 License:	PD
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/anysize.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/anysize.doc.r%{version}.tar.xz
